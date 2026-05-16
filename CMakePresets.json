@@ -11,7 +11,7 @@
       "hidden": false,
       "generator": "Ninja",
       "cacheVariables": {
-        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "1",
 				"CMAKE_BUILD_TYPE": "Release"
       }
     }
