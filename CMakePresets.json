@@ -7,11 +7,12 @@
   },
   "configurePresets": [
     {
-      "name": "Release",
+      "name": "release",
       "hidden": false,
       "generator": "Ninja",
       "cacheVariables": {
-        "CMAKE_EXPORT_COMPILE_COMMANDS": "1",
+        "ARROW_BUILD_STATIC": "ON",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
 				"CMAKE_BUILD_TYPE": "Release"
       }
     }
