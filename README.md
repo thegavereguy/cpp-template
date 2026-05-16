@@ -1,19 +1,5 @@
-### knn-cpp - my way of getting back to coding
+### cpp-template
 
-#### Disclaimer/story time?
-
-This is a personal project that i'm using a way to get back into coding after a long time without diving into any big projects.
-Before startin university, a was expecting passing most of my free time by working on cool stuff, which obviously didn't happen, at least on as i was hoping.
-As the first part of my accademic life comes to an end, i figured it was the right moment to brush up 'ol reliable C++ by implementing different algortihms and other things i came across during the last few years.
-All this just to say: this code suck, i know it sucks, let me have it sucking. It will take some time to get back to wrinting readable and, hopefuly, performing code.
-
-#### Why KNN?
-It always seemed too simple of a "model" to be somewhat working with decent performance, this was my though while studying it in theory. So where we are i guess.
-I'm still not sure if the result produced make sense, i still have to figure that out.
-
-#### The data
-
-I'm going to be honest, i took the first half-decetly-looking dataset on Keggle. At the moment the structure used for the parsing is hardcoded in the 'include/types.h' header, but maybe i can figure out something better.
 
 #### Instructions
 
@@ -40,7 +26,7 @@ Usage:
 sh ./split_data.sh <input.csv>  <% of rows for training> <% for validation> <% for testing>
 
 # Example
-sh ./split_data.sh ./cancer_data.csv  80 10 10
+sh ./split_data.sh ./data.csv  80 10 10
 ```
 
 ##### Building
@@ -48,8 +34,8 @@ sh ./split_data.sh ./cancer_data.csv  80 10 10
 As a starting point, I created a CMake present, you can start from that if you want to modify something.
 
 ```sh
-cmake --preset Reselase -S . -B _build
-cmake --build _build
+cmake --preset Reselase -S . -B build
+cmake --build build
 ```
 
 ##### Running
