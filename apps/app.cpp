@@ -1,19 +1,17 @@
-#include <lib/lib.h>
-
 #include <iostream>
+#include <lib/lib.h>
+#include <spdlog/spdlog.h>
 
-int main(int argc, char** argv) {
+int main(int argc, char **argv) {
   if (argc != 3) {
-    std::cerr << "Usage: " << argv[0] << " <int> <int>" << std::endl;
+    spdlog::error("Usage: {} <int> <int>", argv[0]);
     return 1;
   }
   int a = std::stoi(argv[1]);
   int b = std::stoi(argv[2]);
 
-  std::cout << "Sum of " << a << " and " << b << " is " << sum(a, b)
-            << std::endl;
-  std::cout << "Product of " << a << " and " << b << " is " << mul(a, b)
-            << std::endl;
+  spdlog::info("Sum of {} and {} is {}", a, b, sum(a, b));
+  spdlog::info("Product of {} and {} is {}", a, b, mul(a, b));
 
   return 0;
 }
