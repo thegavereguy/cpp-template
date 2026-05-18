@@ -8,13 +8,23 @@
   "configurePresets": [
     {
       "name": "release",
+			"displayName": "Release",
       "hidden": false,
       "generator": "Ninja",
       "cacheVariables": {
         "ARROW_BUILD_STATIC": "ON",
         "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
 				"CMAKE_BUILD_TYPE": "Release"
-      }
+      },
+			"binaryDir":"build"
     }
+	],
+	"buildPresets": [
+		{
+			"name": "release",
+			"displayName": "Release",
+			"configurePreset": "release",
+			"verbose": true
+		}
 	]
 }
